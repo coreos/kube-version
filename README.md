@@ -24,7 +24,7 @@ The shim program takes a `kubeconfig` and requests the `/version` API endpoint t
 ### Usage
 
 ```shell
-./bin/kubernetes-versioner --kubeconfig=my_kubeconfig
+./bin/kube-version --kubeconfig=my_kubeconfig
 v1.5.5+coreos.0
 ```
 

@@ -17,6 +17,7 @@ func init() {
 }
 
 func main() {
+	flag.Set("logtostderr", "true")
 	flag.Parse()
 
 	if kubeconfig == "" {

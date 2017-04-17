@@ -36,3 +36,20 @@ PUSH_IMAGE=true make image
 ```
 
 The images are hosted on [quay.io/coreos/kube-verion](https://quay.io/repository/coreos/kube-version?tab=tags)
+
+
+### Release
+
+1. Create a tag
+```shell
+git tag -s 0.1.0
+...
+git push upstream 0.1.0
+```
+
+2. Build an image
+```shell
+PUSH_IMAGE=true VERSION=0.1.0 make image
+```
+
+3. Draft a release with the tag on github.

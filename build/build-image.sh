@@ -8,9 +8,9 @@ readonly VERSION=${VERSION:-$(${REPO_ROOT}/build/git-version.sh)}
 
 sudo rkt run --uuid-file-save=rkt.uuid \
     --volume tco,kind=host,source=${REPO_ROOT} \
-    --mount volume=tco,target=/go/src/github.com/coreos-inc/kube-version \
+    --mount volume=tco,target=/go/src/github.com/coreos/kube-version \
     --insecure-options=image docker://golang:1.7.5 --exec /bin/bash -- -c \
-    "cd /go/src/github.com/coreos-inc/kube-version && make clean all"
+    "cd /go/src/github.com/coreos/kube-version && make clean all"
 
 sudo rkt rm --uuid-file=rkt.uuid
 rm -f rkt.uuid

@@ -1,4 +1,4 @@
-package: github.com/coreos-inc/kubelet-versioner
+package: github.com/coreos/kube-version
 import:
 - package: k8s.io/client-go
   version: v2.0.0
